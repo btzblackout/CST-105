@@ -2,12 +2,11 @@
 public class NFLPlayer 
 {
 	/*Name: Raymond Lawson
-	 *Date: 5/9/2018
+	 *Date: 5/10/2018
 	 *Course: Grand Canyon University (CST-105) 
 	 *Document: NFLPlayer.java
 	 *This is my work.
-	 *Notes: This class only houses the "base" properties for the players. There will be an offensive
-	 *and defensive class for their respective positions with their own properties as an extension of this class. 
+	 *Notes: This class only houses the "base" properties for the players.  
 	*/
 	//Declare variables
 	String name, birthPlace, college, experience, highSchool, team, height, position;
