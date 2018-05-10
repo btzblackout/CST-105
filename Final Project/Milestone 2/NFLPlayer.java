@@ -10,8 +10,8 @@ public class NFLPlayer
 	 *and defensive class for their respective positions with their own properties as an extension of this class. 
 	*/
 	//Declare variables
-	String name, birthPlace, college, experience, highSchool, team;
-	double height, weight;
+	String name, birthPlace, college, experience, highSchool, team, height, position;
+	double weight;
 	int age, number;
 	boolean available = true;
 	
@@ -19,21 +19,24 @@ public class NFLPlayer
 	public NFLPlayer()
 	{
 		this.name = "NA";
+		this.position = "NA";
 		this.birthPlace = "NA";
 		this.college = "NA";
 		this.experience = "NA";
 		this.highSchool = "NA";
 		this.team = "NA";
-		this.height = 0;
+		this.height = "NA";
 		this.weight = 0;
 		this.age = 0;
 		this.number = 0;
 		this.available = false;
 	}
 	//constructor with arguments
-	public NFLPlayer(String name, String birthPlace, String college, String experience, String highSchool, String team, double height, double weight, int age, int number, boolean available)
+	public NFLPlayer(String name, String position, String birthPlace, String college, String experience, String highSchool, String team, 
+			String height, double weight, int age, int number, boolean available)
 	{
 		this.name = name;
+		this.position = position;
 		this.birthPlace = birthPlace;
 		this.college = college;
 		this.experience = experience;
@@ -45,6 +48,12 @@ public class NFLPlayer
 		this.number = number;
 		this.available = available;
 	}
+	
+	//toString method
+	public String toString() 
+	{
+		return this.name; 
+	}
 	//Getters and Setters
 	public String getName()
 	{
@@ -54,7 +63,14 @@ public class NFLPlayer
 	{
 		this.name = name;
 	}
-	
+	public String getPosition()
+	{
+		return position;
+	}
+	public void setPosition (String position)
+	{
+		this.position = position;
+	}
 	public String getBirthPlace()
 	{
 		return birthPlace;
@@ -100,11 +116,11 @@ public class NFLPlayer
 		this.team = team;
 	}
 	
-	public double getHeight()
+	public String getHeight()
 	{
 		return height;
 	}
-	public void setHeight(double height)
+	public void setHeight(String height)
 	{
 		this.height = height;
 	}
@@ -145,7 +161,6 @@ public class NFLPlayer
 		this.available = available;
 	}
 	
-	
 	//main method "driver" to test
 	public static void main(String[] args)
 	{
@@ -159,7 +174,7 @@ public class NFLPlayer
 		System.out.println("Number: " + player1.number + ", " + "Available: " + player1.available);
 		
 		//Testing the argumentable constructor
-		NFLPlayer player2 = new NFLPlayer("Raymond Lawson", "Frankfort, KY", "GCU", "2nd Year", "Greeneville High School", "My Team", 180.34, 215, 23, 1, true);
+		NFLPlayer player2 = new NFLPlayer("Raymond Lawson", "QB", "Frankfort, KY", "GCU", "2nd Year", "Greeneville High School", "My Team", "6ft 4in", 215, 23, 1, true);
 		
 		System.out.println("\n\nPlayer 2 created with custom values:");
 		System.out.println("Name: " + player2.name + ", " + "Birthplace: " + player2.birthPlace + ", " + "College: " + player2.college);
