@@ -1,0 +1,13 @@
+
+#startButton
+{
+	-fx-background-color: linear-gradient(#ffa500, #0000ff);
+	-fx-text-fill: #FFFFFF;
+	-fx-background-radius: 6;
+}
+#rosterLabel
+{
+	-fx-font-size: 20pt;
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+}
